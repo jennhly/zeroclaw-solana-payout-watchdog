@@ -1,0 +1,6 @@
+.demo/
+__pycache__/
+*.pyc
+build/
+*.egg-info/
+watchdog-state.json

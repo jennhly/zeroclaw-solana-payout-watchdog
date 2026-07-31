@@ -1,0 +1,18 @@
+[skill]
+name = "solana-payout-watchdog"
+description = "Check a configured Solana address for new finalized USDC or USDG credits without signing or sending transactions"
+version = "0.1.0"
+author = "money-engine contributors"
+tags = ["solana", "payouts", "read-only", "monitoring"]
+prompts = [
+  "Use this skill only to check the configured public wallet for finalized stablecoin credits.",
+  "Never describe fixture or local-rpc output as a real payout. A real payout must have mode=live, commitment=finalized, and an explorer_url.",
+  "Never request a seed phrase, private key, signing key, or transaction approval. This skill needs only a public address.",
+]
+
+[[tools]]
+name = "check_payouts"
+description = "Return new finalized USDC or USDG credits for the configured public Solana wallet"
+kind = "shell"
+command = "solana-payout-watchdog scan --config payout-watchdog.toml"
+timeout_secs = 45

@@ -1,0 +1,20 @@
+# Copy this file to watchdog.toml and replace only the public wallet address.
+# No seed phrase, private key, or signing key is used anywhere in this project.
+rpc_url = "https://api.mainnet-beta.solana.com"
+wallet = "REPLACE_WITH_A_PUBLIC_SOLANA_ADDRESS"
+state_path = "watchdog-state.json"
+bootstrap = true
+max_signatures = 25
+
+[[tokens]]
+symbol = "USDG"
+mint = "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH"
+decimals = 6
+minimum_amount = "1.00"
+
+[[tokens]]
+symbol = "USDC"
+mint = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+decimals = 6
+minimum_amount = "1.00"
+

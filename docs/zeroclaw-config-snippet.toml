@@ -1,0 +1,39 @@
+# Merge this snippet into an existing ZeroClaw config. It is deliberately not a
+# complete config because model-provider credentials belong to the operator.
+
+[skill_bundles.solana]
+directory = "shared/skills/solana"
+include = ["solana-payout-watchdog"]
+
+[agents.payout_watchdog]
+enabled = true
+channels = ["webhook.payout"]
+model_provider = "REPLACE_WITH_EXISTING_PROVIDER_ALIAS"
+risk_profile = "payout_readonly"
+runtime_profile = "REPLACE_WITH_EXISTING_RUNTIME_PROFILE_ALIAS"
+skill_bundles = ["solana"]
+
+[risk_profiles.payout_readonly]
+level = "supervised"
+workspace_only = true
+allowed_commands = ["solana-payout-watchdog"]
+allowed_tools = ["solana-payout-watchdog__check_payouts"]
+auto_approve = ["solana-payout-watchdog__check_payouts"]
+block_high_risk_commands = true
+require_approval_for_medium_risk = true
+
+[channels.webhook.payout]
+# Keep disabled until secret and outbound delivery are deliberately configured.
+enabled = false
+port = 8090
+listen_path = "/payout-watchdog"
+secret = "REPLACE_WITH_A_STRONG_RANDOM_SECRET"
+excluded_tools = [
+  "shell",
+  "file_write",
+  "http_request",
+  "browser",
+  "cron_add",
+  "cron_update",
+  "cron_remove",
+]

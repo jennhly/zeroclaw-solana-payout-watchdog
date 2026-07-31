@@ -1,0 +1,62 @@
+{
+  "calls": [
+    {
+      "method": "getTokenAccountsByOwner",
+      "first_param": "11111111111111111111111111111111",
+      "result": {
+        "context": {"slot": 351234567},
+        "value": [
+          {"pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"}
+        ]
+      }
+    },
+    {
+      "method": "getSignaturesForAddress",
+      "first_param": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "result": [
+        {
+          "blockTime": 1785456000,
+          "confirmationStatus": "finalized",
+          "err": null,
+          "signature": "fixture-signature-not-a-real-transaction",
+          "slot": 351234560
+        }
+      ]
+    },
+    {
+      "method": "getTransaction",
+      "first_param": "fixture-signature-not-a-real-transaction",
+      "result": {
+        "blockTime": 1785456000,
+        "slot": 351234560,
+        "transaction": {
+          "message": {
+            "accountKeys": [
+              "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+            ]
+          }
+        },
+        "meta": {
+          "err": null,
+          "preTokenBalances": [
+            {
+              "accountIndex": 0,
+              "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+              "owner": "11111111111111111111111111111111",
+              "uiTokenAmount": {"amount": "10000000", "decimals": 6}
+            }
+          ],
+          "postTokenBalances": [
+            {
+              "accountIndex": 0,
+              "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+              "owner": "11111111111111111111111111111111",
+              "uiTokenAmount": {"amount": "12500000", "decimals": 6}
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+

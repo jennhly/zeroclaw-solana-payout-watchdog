@@ -1,0 +1,12 @@
+rpc_url = "https://api.mainnet-beta.solana.com"
+wallet = "11111111111111111111111111111111"
+state_path = ".demo/state.json"
+bootstrap = false
+max_signatures = 25
+
+[[tokens]]
+symbol = "USDG"
+mint = "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH"
+decimals = 6
+minimum_amount = "1.00"
+
