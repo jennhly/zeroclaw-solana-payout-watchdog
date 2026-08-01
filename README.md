@@ -107,8 +107,8 @@ HTTPS RPC. A real-credit alert additionally has `commitment=finalized` and
 is a loopback integration test; neither is proof of payment.
 
 See [THREAT_MODEL.md](THREAT_MODEL.md) for RPC trust, privacy, and non-goals.
-See [VERIFICATION.md](VERIFICATION.md) for the tested ZeroClaw version and
-local end-to-end receipt.
+See [VERIFICATION.md](VERIFICATION.md) for the tested ZeroClaw version, local
+stub receipt, and HMAC-signed webhook flow with a live finalized mainnet read.
 
 ## References
 

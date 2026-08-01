@@ -43,14 +43,46 @@ Integration demo complete. The result is local-rpc test data, not a real payout.
 This proves the agent-to-skill-to-RPC-to-agent loop without pretending a mock
 credit is on-chain payment evidence.
 
+## Signed webhook + live mainnet check
+
+At 2026-07-31 20:19 EDT, the official ZeroClaw 0.8.3 daemon accepted an
+HMAC-SHA256-signed request on its webhook channel and returned HTTP 200. The
+agent used the installed `solana-payout-watchdog__check_payouts` tool against
+an HTTPS Solana mainnet RPC for the user-controlled public wallet
+`B4NX…umDS`. The wallet is intentionally redacted here; no private or signing
+material was requested or used.
+
+The tool receipt was:
+
+```json
+{
+  "alerts": [],
+  "bootstrapped_accounts": 0,
+  "commitment": "finalized",
+  "mode": "live",
+  "scanned_signatures": 0,
+  "status": "ok",
+  "token_accounts": 0,
+  "wallet": "B4NX…umDS"
+}
+```
+
+ZeroClaw delivered this reply to the configured callback:
+
+```text
+Live finalized Solana scan complete. No new USDG or USDC payout credits were found for the configured public wallet.
+```
+
+The channel, agent loop, skill process, and callback ran locally; a deterministic
+OpenAI-compatible model adapter selected the only allowlisted tool. The chain
+query itself was live, not stubbed. This result proves the signed-channel flow
+and a successful finalized mainnet read. It does **not** claim that a payout was
+received. There is no Explorer URL because there was no credit alert.
+
 ## Still required before bounty submission
 
-- Run on a genuine ZeroClaw channel using a user-controlled public wallet and
-  trusted HTTPS RPC.
-- Capture the channel interaction. A “no new finalized credits” response is
-  honest evidence; a credit may be called real only when the result is
-  `mode=live`, `commitment=finalized`, and includes an independently verifiable
-  Explorer URL.
-- Publish the repository, add the real URLs to `SHOWCASE_DRAFT.md`, post the
-  showcase in the required Discord channel, and submit the Superteam form.
-
+- Capture a short screen recording or screenshots of the reproducible demo if
+  the submission form requires media.
+- Post `SHOWCASE_DRAFT.md` in the required ZeroClaw Discord channel and add the
+  resulting message URL to the draft.
+- Submit the final repository and showcase URLs through the Superteam form.
