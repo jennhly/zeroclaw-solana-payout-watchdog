@@ -87,8 +87,14 @@ captures a fresh run of `demo/live_webhook_demo.py`. The frame was cropped to
 remove unrelated desktop and local account details; the terminal output was
 not replaced. The wallet remains redacted.
 
-## Still required before bounty submission
+## Submission receipts
 
-- Post `SHOWCASE_DRAFT.md` in the required ZeroClaw Discord channel and add the
-  resulting message URL to the draft.
-- Submit the final repository and showcase URLs through the Superteam form.
+- Discord showcase with attached MP4:
+  https://discord.com/channels/1472154792351760419/1527427886410109029/1532922167560245389
+- Public Drive demo (anyone with the link, Viewer):
+  https://drive.google.com/file/d/1QCD4RW0apUcUQc5IvtnCTQaQ48P8boxp/view?usp=sharing
+- Superteam accepted the entry on 2026-07-31 and changed the listing action to
+  `Edit Submission`. The form contained the Discord permalink, Drive demo,
+  verification record, and public repository. The required KYC acknowledgement
+  was checked and one submission credit was spent.
+- Judging is pending. This receipt records a competitive submission, not income.
