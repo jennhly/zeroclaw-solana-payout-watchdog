@@ -99,6 +99,19 @@ documented by ZeroClaw. Never expose an unauthenticated webhook. A real demo
 must show the channel message, the tool receipt, and either “no new finalized
 credits” or a live alert whose Explorer transaction is independently visible.
 
+For a fully reproducible signed-channel run, install the official ZeroClaw
+binary, create the ignored `payout-watchdog.toml`, and run:
+
+```bash
+python3 demo/live_webhook_demo.py --zeroclaw /path/to/zeroclaw
+```
+
+The script creates an isolated runtime, installs and audits this skill, starts
+an HMAC-authenticated webhook, and performs a live scan using the operator's
+HTTPS RPC configuration. Its deterministic local model adapter needs no API
+key and can only select the one allowlisted read-only tool. Wallet output is
+redacted.
+
 ## Output contract
 
 The command prints one JSON object. `mode=live` means it contacted a non-local
