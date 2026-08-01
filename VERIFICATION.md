@@ -79,10 +79,16 @@ query itself was live, not stubbed. This result proves the signed-channel flow
 and a successful finalized mainnet read. It does **not** claim that a payout was
 received. There is no Explorer URL because there was no credit alert.
 
+The accompanying 14.5-second H.264 recording is
+[`demo/live-webhook-demo.mp4`](demo/live-webhook-demo.mp4) (1920×686,
+100,343 bytes, SHA-256
+`11f8dc9ed861505289096dd46019ecd4e93817799723497f7b5247e182bab63a`). It
+captures a fresh run of `demo/live_webhook_demo.py`. The frame was cropped to
+remove unrelated desktop and local account details; the terminal output was
+not replaced. The wallet remains redacted.
+
 ## Still required before bounty submission
 
-- Capture a short screen recording or screenshots of the reproducible demo if
-  the submission form requires media.
 - Post `SHOWCASE_DRAFT.md` in the required ZeroClaw Discord channel and add the
   resulting message URL to the draft.
 - Submit the final repository and showcase URLs through the Superteam form.

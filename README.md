@@ -112,6 +112,10 @@ HTTPS RPC configuration. Its deterministic local model adapter needs no API
 key and can only select the one allowlisted read-only tool. Wallet output is
 redacted.
 
+[Watch the 15-second recorded run](demo/live-webhook-demo.mp4). It shows the
+official runtime accepting the signed channel request, invoking the tool, and
+returning the live finalized result. It does not claim a payout occurred.
+
 ## Output contract
 
 The command prints one JSON object. `mode=live` means it contacted a non-local

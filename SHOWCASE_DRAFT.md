@@ -16,6 +16,8 @@ Repository: https://github.com/jennhly/zeroclaw-solana-payout-watchdog
 
 Verification: https://github.com/jennhly/zeroclaw-solana-payout-watchdog/blob/main/VERIFICATION.md
 
+Video: https://github.com/jennhly/zeroclaw-solana-payout-watchdog/blob/main/demo/live-webhook-demo.mp4
+
 Live demo result: ZeroClaw 0.8.3 accepted an HMAC-signed webhook, invoked the
 installed skill, queried Solana mainnet over HTTPS with finalized commitment,
 and correctly reported no new USDG/USDC credits. The public wallet is redacted
